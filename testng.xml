@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="gurukula">
+        <classes>
+            <class name="com.snow.gk.GurukulaTest">
+            <methods>
+                <include name="createBranch"/>
+                <include name="createStaff"/>
+                <include name="searchBranches"/>
+                <include name="searchStaff"/>
+                <include name="cancelBranch"/>
+                <include name="viewEditDeleteStaff"/>
+                <include name="viewEditDeleteBranch"/>
+                <include name="editAccountSettings"/>
+                <include name="updatePassword"/>
+                <include name="registerNewAccount"/>
+                <include name="loginWithInvalidCredentials"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
