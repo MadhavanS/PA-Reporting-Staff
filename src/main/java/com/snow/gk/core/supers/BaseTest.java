@@ -40,7 +40,7 @@ public class BaseTest {
             }
             DriverSetup.initializeDriver(browser);
             driver = DriverSetup.getDriver();
-            //driver.manage().window().maximize();
+            driver.manage().window().maximize();
             baseURL = Config.getConfig().getConfigProperty("baseurl") + ":" +Config.getConfig().getConfigProperty("port");
             System.out.println("Base URL: " + baseURL);
             Logger.info(baseURL);
@@ -50,7 +50,7 @@ public class BaseTest {
         }
     }
 
-    //@AfterClass(alwaysRun = true)
+    @AfterClass(alwaysRun = true)
     public void logoutAndCloseOpenedBrowsers() throws CustomException {
         try {
             if (DriverSetup.browserInitialized && driver != null) {
@@ -65,10 +65,7 @@ public class BaseTest {
         }
     }
 
-    protected void logout() throws CustomException {
-        boolean pageAssert = AllPages.getPage(LoginPage.class).loginPageVerification();
-        //Assertions.hardAssertTrue(pageAssert, "Logged out of Travis Perkins successfully");
-    }
+    protected void logout() throws CustomException {}
 
 
     // Login to TP Application

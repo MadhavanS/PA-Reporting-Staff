@@ -100,7 +100,6 @@ public class DriverSetup {
 
     public static void gotoUrl(String url) {
         driver.get(url);
-        //Waits.waitForPageLoadJS();
         Logger.info("Navigated to " + url + " link");
     }
 }
